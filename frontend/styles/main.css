@@ -1,0 +1,122 @@
+div {
+    background-color: white;
+    border: solid black 1px;
+    border-radius: 2%;
+    margin: auto;
+    width: 60%;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    border-bottom: none;
+
+}
+
+span {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    background-color: white;
+    border: solid black 1px;
+    border-radius: 2%;
+    width: 40%;
+    border-bottom: none;
+
+}
+
+
+body {
+    background-color: white;
+}
+
+h3{
+    margin-bottom: 5px;
+}
+ul {
+    list-style-type: none;
+    text-align: left;
+}
+
+li{
+
+}
+input[type=submit] {
+    background-color: darkgray;
+    color: white;
+    border: none;
+    border-radius: 10%;
+    width: 75px;
+    height: 25px;
+    font-family: "Courier New";
+}
+
+
+.button {
+    background-color: darkgray;
+    color: white;
+    border: none;
+    border-radius: 10%;
+    width: 75px;
+    height: 25px;
+    font-family: "Courier New";
+}
+
+.navbar {
+    border: none    ;
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+.chat-element{
+    height: 50px;
+    border: 1px black solid;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    cursor: pointer;
+}
+
+#logout{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+
+#chat {
+    width: 60%;
+}
+#chat-list {
+    display: inline
+}
+
+#chat-list-container{
+    width: 100%;
+    margin: auto;
+    border: none;
+    display: inline-flex;
+    height: 400px;
+    overflow-y: scroll;
+}
+
+#chatbox {
+    width: 100%;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 0%;
+    height: 400px;
+    overflow-y: scroll
+}
+
+li {
+    word-wrap: break-word;
+    width: 400px;
+
+}
+
+#logged-in{
+    border-bottom: black 1px solid;
+}
+
+

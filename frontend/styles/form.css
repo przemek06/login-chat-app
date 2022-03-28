@@ -1,0 +1,25 @@
+div {
+    background-color: white;
+    border: solid black 1px;
+    border-radius: 2%;
+    margin: auto;
+    width: 60%;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+
+.button {
+    background-color: darkgray;
+    color: white;
+    border: none;
+    border-radius: 10%;
+    width: 75px;
+    height: 25px;
+    font-family: "Courier New";
+}
+
+#error{
+    color: red;
+}
