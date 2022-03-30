@@ -8,7 +8,9 @@ To build and run this applcation, please use Maven in project's root directory:
 mvn clean package
 ```
 And then execute .jar file created in target directory.
-
+```
+java -jar demo-0.0.1-SNAPSHOT.jar
+```
 ## Technologies
 Main technologies used in this project:
 * Spring Web
