@@ -13,6 +13,9 @@ import javax.annotation.PreDestroy;
 import java.util.*;
 import java.util.stream.Collectors;
 
+/*
+    Very poor implementation, because of required synchronisation, ideally would use something like Redis
+ */
 @Component
 public class MessageBufferImpl implements MessageBuffer<MessageEntity>{
 
@@ -27,7 +30,7 @@ public class MessageBufferImpl implements MessageBuffer<MessageEntity>{
         this.messages = new ArrayList<>();
     }
 
-    public void save(MessageEntity messageEntity) throws JobParametersInvalidException, JobExecutionAlreadyRunningException, JobRestartException, JobInstanceAlreadyCompleteException {
+    public synchronized void save(MessageEntity messageEntity) throws JobParametersInvalidException, JobExecutionAlreadyRunningException, JobRestartException, JobInstanceAlreadyCompleteException {
         messages.add(messageEntity);
         if(messages.size()>=CAPACITY) uploadAndClear();
     }
@@ -49,7 +52,7 @@ public class MessageBufferImpl implements MessageBuffer<MessageEntity>{
         return messages.remove(index);
     }
 
-    public void uploadAndClear() throws JobParametersInvalidException, JobExecutionAlreadyRunningException, JobRestartException, JobInstanceAlreadyCompleteException {
+    public synchronized void uploadAndClear() throws JobParametersInvalidException, JobExecutionAlreadyRunningException, JobRestartException, JobInstanceAlreadyCompleteException {
         Map<String, JobParameter> maps = new HashMap<>();
         maps.put("time", new JobParameter(System.currentTimeMillis()));
         JobParameters parameters = new JobParameters(maps);
