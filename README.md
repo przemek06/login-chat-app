@@ -1,5 +1,5 @@
 # Login Chat Application
-Application for chatting in existing groups.
+Web application for chatting in groups
 
 ## Setup
 First, you need to create .env file in resources directory. In this file, you need to give information required to connect to MySql database.
